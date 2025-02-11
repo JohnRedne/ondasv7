@@ -5,6 +5,7 @@ matplotlib==3.4.3
 redis==4.0.2
 celery==5.1.2
 Werkzeug==2.2.3
+click==7.1.2
 gunicorn
 flask_cors==5.0.0
 
