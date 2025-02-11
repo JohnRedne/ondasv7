@@ -5,7 +5,7 @@ matplotlib==3.4.3
 redis==4.0.2
 celery==5.1.2
 gunicorn
-flask_cors==3.1.1
+flask_cors==5.0.0
 
 
 
