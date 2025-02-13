@@ -12,6 +12,8 @@ import requests
 import io
 from obspy import read, UTCDateTime
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')  # Para evitar problemas de GUI en entornos sin pantalla
 import os
 from flask_cors import CORS
 from redis import Redis
@@ -66,7 +68,6 @@ def generate_sismogram_task(self, start_date_input, end_date_input, net, sta):
         channels = ["HNE.D", "HNN.D", "HNZ.D"]
         osso_urls = [
             f"http://osso.univalle.edu.co/apps/seiscomp/archive/{year}/{net}/{sta}/{channel}/{net}.{sta}.00.{channel}.{year}.{julian_day}"
-            
             for channel in channels
         ]
 
